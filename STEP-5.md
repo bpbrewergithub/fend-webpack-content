@@ -32,8 +32,14 @@ Go ahead and rename the webpack config file we have to `webpack.dev.js` and crea
 
 Add the correct mode flag to each one:
 
+In webpack.dev.js:
 ```
-mode: "development"/"production"
+mode: 'development',
+devtool: 'source-map',
+```
+In webpack.prod.js:
+```
+mode: 'production',
 ```
 
 We also have to edit our npm script to use the correct files we run `npm run build`. Your scripts will look like this:
